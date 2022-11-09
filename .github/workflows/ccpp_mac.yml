@@ -1,14 +1,9 @@
-name: C/C++ Nightly macos
+name: C/C++ Dev macos
 
 on:
   push:
     branches:
-      - Nigthly
-      - nightly_dev
-      - nightly_master
-      - debug_macos
       - dev
-      - patch-1
 
 jobs:
   build:
