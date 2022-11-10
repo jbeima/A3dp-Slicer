@@ -1,9 +1,9 @@
-name: C/C++ Dev macos
+name: C/C++ Main macos
 
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   build:
