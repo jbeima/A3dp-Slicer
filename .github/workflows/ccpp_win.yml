@@ -1,9 +1,9 @@
-name: C/C++ Dev windows x64
+name: C/C++ Main windows x64
 
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   build_dep:
@@ -101,7 +101,7 @@ jobs:
 #    - name: create zip
 #      working-directory: ./build
 #      shell: cmd
-#      run: '"C:/Program Files/7-Zip/7z.exe" a -tzip nightly.zip *'
+#      run: '"C:/Program Files/7-Zip/7z.exe" a -tzip main.zip *'
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
