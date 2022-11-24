@@ -1,4 +1,4 @@
-name: C/C++ Main macos
+name: C/C++ Main MacOS - 10.X
 
 on:
   push:
