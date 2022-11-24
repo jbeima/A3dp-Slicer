@@ -1,9 +1,9 @@
-name: C/C++ Main - MacOS - 11
+name: C/C++ Dev - MacOS - 11
 
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   build:
@@ -25,10 +25,10 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: ${{ github.event.repository.name }}_main.app
+        name: ${{ github.event.repository.name }}_dev.app
         path: build/pack/${{ github.event.repository.name }}/${{ github.event.repository.name }}.app
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: ${{ github.event.repository.name }}_main.dmg
+        name: ${{ github.event.repository.name }}_dev.dmg
         path: ${{ github.event.repository.name }}.dmg
