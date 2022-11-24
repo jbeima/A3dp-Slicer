@@ -1,4 +1,4 @@
-name: C/C++ Main MacOS - 10.X
+name: C/C++ Main MacOS - 10.15.X
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 jobs:
   build:
 
-    runs-on: macos-10
+    runs-on: macos-10.15
 
     steps:
     - uses: actions/checkout@v3
