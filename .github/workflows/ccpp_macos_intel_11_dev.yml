@@ -12,8 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: set build script permissions.
+      run: chmod ugo+x ./BuildMacOS_11.sh
     - name: build deps & slicer
-      run: ./BuildMacOS.sh
+      run: ./BuildMacOS_11.sh - ix
     - name: copy zstd
       run: cp /usr/local/opt/zstd/lib/libzstd.1.dylib ./build/pack/${{ github.event.repository.name }}/${{ github.event.repository.name }}.app/Contents/MacOS/libzstd.1.dylib
     - name: relink zstd
@@ -25,10 +27,10 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: ${{ github.event.repository.name }}_dev.app
+        name: ${{ github.event.repository.name }}_macos_11_intel_dev.app
         path: build/pack/${{ github.event.repository.name }}/${{ github.event.repository.name }}.app
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: ${{ github.event.repository.name }}_dev.dmg
+        name: ${{ github.event.repository.name }}_macos_11_intel_dev.dmg
         path: ${{ github.event.repository.name }}.dmg
