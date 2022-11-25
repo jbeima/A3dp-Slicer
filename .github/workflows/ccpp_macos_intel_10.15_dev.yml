@@ -12,8 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: build deps & slicer
+    - name: set build script permissions.
       run: chmod ugo+x ./BuildMacOS_10-15.sh
+    - name: build deps & slicer
       run: ./BuildMacOS_10-15.sh -ix
     - name: copy zstd
       run: cp /usr/local/opt/zstd/lib/libzstd.1.dylib ./build/pack/${{ github.event.repository.name }}/${{ github.event.repository.name }}.app/Contents/MacOS/libzstd.1.dylib
