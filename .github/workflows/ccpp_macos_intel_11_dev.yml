@@ -1,4 +1,4 @@
-name: C/C++ Dev - MacOS - 11
+name: C/C++ Dev - MacOS - 11 - Intel
 
 on:
   push:
